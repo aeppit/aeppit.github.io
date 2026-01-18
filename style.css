@@ -1,0 +1,47 @@
+    @font-face {
+      font-family: 'ClimateCrisis';
+      src: url('assests/fonts/ClimateCrisis.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'ClimateCrisis', sans-serif;
+      overflow: hidden;
+    }
+
+    .text {
+      color: #fff;
+      font-size: 5rem;
+      letter-spacing: 0.6em;
+      opacity: 0;
+      filter: blur(14px);
+      transform: scale(1.08);
+      transition:
+        opacity 2s ease,
+        filter 2s ease,
+        letter-spacing 2s ease,
+        transform 2s ease;
+    }
+
+    .text.show {
+      opacity: 1;
+      filter: blur(0);
+      letter-spacing: 0.18em;
+      transform: scale(1);
+    }
